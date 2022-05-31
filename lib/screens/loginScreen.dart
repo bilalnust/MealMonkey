@@ -7,9 +7,38 @@ import '../screens/signUpScreen.dart';
 import '../utils/helper.dart';
 import '../widgets/customTextInput.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   static const routeName = "/loginScreen";
-  
+
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+
+  // email validator function
+  String _validateEmail(value) {
+    if (value.isEmpty) {
+      return 'Enter email address';
+    }
+    final regex = RegExp(r'^.+@[a-zA-Z]+\.{1}[a-zA-Z]+(\.{0,1}[a-zA-Z]+)$');
+    if (!regex.hasMatch(value)) {
+      return 'Enter a valid email address';
+    }
+    return null;
+  }
+
+  // password validator function
+  String _validatePassword(value) {
+    if (value.isEmpty) return 'Enter password';
+    final regex = RegExp(r'^.+@[a-zA-Z]+\.{1}[a-zA-Z]+(\.{0,1}[a-zA-Z]+)$');
+    if (!regex.hasMatch(value)) {
+      return 'Enter a valid password';
+    }
+    return null;
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +72,9 @@ class LoginScreen extends StatelessWidget {
                   height: 50,
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(context, "/homeScreen");
+                    },
                     child: Text("Login"),
                   ),
                 ),
