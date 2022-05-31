@@ -9,7 +9,7 @@ import '../widgets/customTextInput.dart';
 
 class LoginScreen extends StatelessWidget {
   static const routeName = "/loginScreen";
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +43,9 @@ class LoginScreen extends StatelessWidget {
                   height: 50,
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(context, "/homeScreen");
+                    },
                     child: Text("Login"),
                   ),
                 ),
