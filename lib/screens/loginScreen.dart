@@ -53,7 +53,7 @@ class LoginScreen extends StatelessWidget {
                 GestureDetector(
                   onTap: () {
                     Navigator.of(context)
-                        .pushReplacementNamed(ForgetPwScreen.routeName);
+                        .pushReplacementNamed("/restpwScreen");
                   },
                   child: Text("Forget your password?"),
                 ),
@@ -127,7 +127,7 @@ class LoginScreen extends StatelessWidget {
                 GestureDetector(
                   onTap: () {
                     Navigator.of(context)
-                        .pushReplacementNamed(SignUpScreen.routeName);
+                        .pushReplacementNamed('/signUpScreen');
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,

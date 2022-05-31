@@ -40,8 +40,7 @@ class SignUpScreen extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => HomeScreen()));
+                    Navigator.pushReplacementNamed(context, "/homeScreen");
                   },
                   child: Text("Sign Up"),
                 ),
@@ -50,7 +49,7 @@ class SignUpScreen extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   Navigator.of(context)
-                      .pushReplacementNamed(LoginScreen.routeName);
+                      .pushReplacementNamed("/loginScreen");
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,

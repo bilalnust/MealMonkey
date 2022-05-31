@@ -112,7 +112,7 @@ class _IntroScreenState extends State<IntroScreen> {
                   child: ElevatedButton(
                       onPressed: () {
                         Navigator.of(context)
-                            .pushReplacementNamed(HomeScreen.routeName);
+                            .pushReplacementNamed("/homeScreen");
                       },
                       child: Text("Next")),
                 ),

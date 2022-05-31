@@ -71,7 +71,7 @@ class LandingScreen extends StatelessWidget {
                     child: ElevatedButton(
                       onPressed: () {
                         Navigator.of(context)
-                            .pushReplacementNamed(LoginScreen.routeName);
+                            .pushReplacementNamed("/loginScreen");
                       },
                       child: Text("Login"),
                     ),
@@ -95,7 +95,10 @@ class LandingScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context)
+                            .pushReplacementNamed("/signUpScreen");
+                      },
                       child: Text("Create an Account"),
                     ),
                   ),
