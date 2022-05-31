@@ -251,7 +251,7 @@ class HomeScreen extends StatelessWidget {
                         GestureDetector(
                           onTap: () {
                             Navigator.of(context)
-                                .pushNamed(IndividualItem.routeName);
+                                .pushNamed("/individualScreen");
                           },
                           child: RecentItemCard(
                             image: Image.asset(

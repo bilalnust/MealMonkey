@@ -68,8 +68,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => HomeScreen()));
+                    Navigator.pushReplacementNamed(context, "/homeScreen");
                   },
                   child: Text("Sign Up"),
                 ),
@@ -78,7 +77,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               GestureDetector(
                 onTap: () {
                   Navigator.of(context)
-                      .pushReplacementNamed(LoginScreen.routeName);
+                      .pushReplacementNamed("/loginScreen");
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,

@@ -101,7 +101,7 @@ class MenuScreen extends StatelessWidget {
                               GestureDetector(
                                 onTap: () {
                                   Navigator.of(context)
-                                      .pushNamed(DessertScreen.routeName);
+                                      .pushNamed('/dessertScreen');
                                 },
                                 child: MenuCard(
                                   imageShape: ClipPath(
