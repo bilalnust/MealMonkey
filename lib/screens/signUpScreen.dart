@@ -5,8 +5,36 @@ import '../screens/loginScreen.dart';
 import '../utils/helper.dart';
 import '../widgets/customTextInput.dart';
 
-class SignUpScreen extends StatelessWidget {
+class SignUpScreen extends StatefulWidget {
   static const routeName = '/signUpScreen';
+
+  @override
+  State<SignUpScreen> createState() => _SignUpScreenState();
+}
+
+class _SignUpScreenState extends State<SignUpScreen> {
+
+  // email validator function
+  String _validateEmail(value) {
+    if (value.isEmpty) {
+      return 'Enter email address';
+    }
+    final regex = RegExp(r'^.+@[a-zA-Z]+\.{1}[a-zA-Z]+(\.{0,1}[a-zA-Z]+)$');
+    if (!regex.hasMatch(value)) {
+      return 'Enter a valid email address';
+    }
+    return null;
+  }
+
+  // password validator function
+  String _validatePassword(value) {
+    if (value.isEmpty) return 'Enter password';
+    final regex = RegExp(r'^.+@[a-zA-Z]+\.{1}[a-zA-Z]+(\.{0,1}[a-zA-Z]+)$');
+    if (!regex.hasMatch(value)) {
+      return 'Enter a valid password';
+    }
+    return null;
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

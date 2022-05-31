@@ -4,8 +4,23 @@ import '../utils/helper.dart';
 import '../widgets/customTextInput.dart';
 import './sentOTPScreen.dart';
 
-class ForgetPwScreen extends StatelessWidget {
+class ForgetPwScreen extends StatefulWidget {
   static const routeName = "/restpwScreen";
+
+  @override
+  State<ForgetPwScreen> createState() => _ForgetPwScreenState();
+}
+
+class _ForgetPwScreenState extends State<ForgetPwScreen> {
+  // password validator function
+  String _validatePassword(value) {
+    if (value.isEmpty) return 'Enter password';
+    final regex = RegExp(r'^.+@[a-zA-Z]+\.{1}[a-zA-Z]+(\.{0,1}[a-zA-Z]+)$');
+    if (!regex.hasMatch(value)) {
+      return 'Enter a valid password';
+    }
+    return null;
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

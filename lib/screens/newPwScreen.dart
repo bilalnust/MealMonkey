@@ -3,8 +3,25 @@ import '../utils/helper.dart';
 import '../widgets/customTextInput.dart';
 import './introScreen.dart';
 
-class NewPwScreen extends StatelessWidget {
+class NewPwScreen extends StatefulWidget {
   static const routeName = "/newPw";
+
+  @override
+  State<NewPwScreen> createState() => _NewPwScreenState();
+}
+
+class _NewPwScreenState extends State<NewPwScreen> {
+
+  // password validator function
+  String _validatePassword(value) {
+    if (value.isEmpty) return 'Enter password';
+    final regex = RegExp(r'^.+@[a-zA-Z]+\.{1}[a-zA-Z]+(\.{0,1}[a-zA-Z]+)$');
+    if (!regex.hasMatch(value)) {
+      return 'Enter a valid password';
+    }
+    return null;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
