@@ -1,8 +1,6 @@
-# Food Delivery App - Flutter UI 
+# "Meal Monkey" - Food Delivery App 
 
-This is our complete food delivery app, where I will share with you how you can create a nice clean screens for your app that can run both Andriod and iOS devices because it builds with #flutter.
-
-## [Watch it on YouTube](https://www.youtube.com/playlist?list=PLFl8xqtYMecwuFQxVMXkWeYJfXCy38KLS)
+A food delivery app, where I will share with you nice clean screens for your app that can run both Andriod and iOS devices because it builds with #flutter.
 
 **Packages we are using:**
 
@@ -46,3 +44,6 @@ Thanks for your love and support 🙏
 ![Preview](https://i.ibb.co/9vhkDqX/5.png)
 ![Preview](https://i.ibb.co/XFXnRTc/6.png)
 ![Preview](https://i.ibb.co/5RXvk8s/7.png)
+
+##Installation Guide
+-----------------------
